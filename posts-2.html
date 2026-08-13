@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · sf-t3-1779642675702-036</title>
+  <meta name="description" content="sf-t3-1779642675702-036에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-036.maphoshirts.com/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* Design System: Editorial Luxury (Noir Gold) - Preserved */
+ :root {
+ --color-bg: #050505;
+ --color-text: #e0e0e0;
+ --color-accent: #d4af37; /* Luxury Gold */
+ --color-surface: #111111;
+ --font-main: 'Helvetica Neue', 'Apple SD Gothic Neo', sans-serif;
+ --font-serif: 'Didot', 'Playfair Display', serif;
+ --spacing-unit: 1.5rem;
+ }
+
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+ body {
+ background-color: var(--color-bg);
+ color: var(--color-text);
+ font-family: var(--font-main);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+
+ a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+ a:hover { color: var(--color-accent); }
+
+ /* Typography */
+ h1, h2, h3 {
+ font-family: var(--font-serif);
+ font-weight: 700;
+ color: #fff;
+ letter-spacing: -0.02em;
+ }
+
+ h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; }
+ h2 { font-size: 2.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-accent); display: inline-block; padding-bottom: 0.5rem; }
+ h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-accent); }
+ p { font-size: 1.125rem; margin-bottom: 1.5rem; color: #aaa; max-width: 700px; }
+
+ /* Layout */
+ header {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ padding: 1.5rem 2rem;
+ background: rgba(5, 5, 5, 0.9);
+ backdrop-filter: blur(10px);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ z-index: 1000;
+ border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+ }
+
+ .logo {
+ font-family: var(--font-serif);
+ font-size: 1.5rem;
+ font-weight: bold;
+ color: var(--color-accent);
+ letter-spacing: 0.1em;
+ }
+
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 2rem;
+ }
+
+ nav a {
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ font-weight: 600;
+ }
+
+ /* Hamburger */
+ .hamburger { display: none; cursor: pointer; }
+ .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: var(--color-accent); transition: all 0.3s ease-in-out; }
+
+ /* Responsive */
+ @media (max-width: 768px) {
+ h1 { font-size: 2.5rem; }
+ h2 { font-size: 2rem; }
+ nav {
+ position: fixed;
+ top: 70px;
+ right: -100%;
+ width: 100%;
+ height: calc(100vh - 70px);
+ background: var(--color-bg);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ }
+ nav.active { right: 0; }
+ nav ul { flex-direction: column; text-align: center; }
+ .hamburger { display: block; }
+ .hamburger.active .bar:nth-child(2) { opacity: 0; }
+ .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+ .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+ }
+
+ /* Main Content Styles */
+ main { padding-top: 100px; }
+ 
+ .section {
+ padding: 4rem 2rem;
+ max-width: 1200px;
+ margin: 0 auto;
+ }
+
+ .hero-text { text-align: left; margin-bottom: 4rem; }
+ .hero-text span { color: var(--color-accent); font-family: var(--font-main); font-weight: 300; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.9rem; display: block; margin-bottom: 1rem; }
+
+ .info-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ margin-top: 3rem;
+ }
+
+ .info-card {
+ background: var(--color-surface);
+ padding: 2.5rem;
+ border: 1px solid rgba(255, 255, 255, 0.05);
+ transition: transform 0.3s ease;
+ }
+
+ .info-card:hover {
+ transform: translateY(-5px);
+ border-color: var(--color-accent);
+ }
+
+ .cta-button {
+ display: inline-block;
+ margin-top: 2rem;
+ padding: 1rem 3rem;
+ background: transparent;
+ border: 1px solid var(--color-accent);
+ color: var(--color-accent);
+ font-weight: bold;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ transition: all 0.3s;
+ }
+
+ .cta-button:hover {
+ background: var(--color-accent);
+ color: #000;
+ }
+
+ .faq-section { margin-top: 5rem; }
+ .faq-item {
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ padding: 1.5rem 0;
+ }
+ .faq-question { font-weight: bold; color: #fff; margin-bottom: 0.5rem; display: flex; justify-content: space-between; }
+ .faq-answer { color: #888; font-size: 0.95rem; }
+
+ footer {
+ text-align: center;
+ padding: 4rem 2rem;
+ border-top: 1px solid rgba(255, 255, 255, 0.05);
+ margin-top: 4rem;
+ font-size: 0.8rem;
+ color: #555;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · sf-t3-1779642675702-036">
+  <meta property="og:description" content="sf-t3-1779642675702-036에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-036.maphoshirts.com/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo">NOIR SEOUL</div>
+ <nav>
+ <ul>
+ <li><a href="#">홈</a></li>
+ <li><a href="#">룸 소개</a></li>
+ <li><a href="#">메뉴 & 가격</a></li>
+ <li><a href="#">위치 & 정보</a></li>
+ 
+ </ul>
+ </nav>
+ <div class="hamburger">
+ 
+ 
+ 
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 34개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0311.html">강남 셔츠룸 스타일을 벤치마킹하는 마곡 가라오케 추천정보 실패 없는 예약법</a>
+        <p class="post-item__summary">강남 셔츠룸 이용자들이 흔히 겪는 실패 사례 중 하나는 바로 예약 과정에서의 소통 부재입니다. 원하는 시간과 인원, 그리고 세부적인 요구 사항을 명확히 전달하지 않아 현장에서 낭패를 보는 경우가 많</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0312.html">강남 셔츠룸 기준에서 보는 마곡 유흥 추천정보 선택 시 필수 체크리스트</a>
+        <p class="post-item__summary">강남 셔츠룸 환경에 익숙한 이들에게 마곡 지역의 유흥 업소를 고르는 일은 낯설게 느껴질 수 있습니다. 지역마다 특색이 다르고 접근성 또한 천차만별이기 때문에 몇 가지 항목을 체크리스트로 만들어 비교</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0313.html">강남 셔츠룸 방문객이 합정 노래방 추천정보 찾아 떠나는 이유</a>
+        <p class="post-item__summary">낯선 지역에서 유흥 시설을 찾는 일은 생각보다 복잡한 절차를 동반합니다. 특히 평소 강남 셔츠룸 스타일의 운영 방식에 익숙해진 방문객이라면, 합정 지역의 차분한 분위기를 처음 접할 때 당황하기 쉽습</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0314.html">강남 셔츠룸 경험자가 오해하는 연남 클럽 추천정보와 시간대</a>
+        <p class="post-item__summary">흔히 대형 업소의 시스템만을 경험한 이들은 연남동의 클럽 문화도 이와 비슷할 것이라 오해하곤 합니다. 하지만 이곳의 분위기는 정형화된 서비스보다는 현장의 에너지를 공유하는 데 중점이 맞춰져 있습니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0315.html">강남 셔츠룸 규격과 다른 합정 셔츠룸 추천정보 및 인원 구성</a>
+        <p class="post-item__summary">만족스러운 시간을 보내기 위해서는 방문 전 인원 구성의 최적화가 무엇보다 우선되어야 합니다. 공간의 크기와 예약된 인원이 맞지 않으면 이동의 제약은 물론 소통의 즐거움도 반감되기 마련입니다. 강남 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0316.html">강남 셔츠룸 잊고 공덕 가라오케 추천정보 통해 업체 비교하기</a>
+        <p class="post-item__summary">혹시 공덕 인근에서 장소를 물색하며 무엇을 가장 우선순위로 두어야 할지 고민하고 계십니까? 강남 셔츠룸 스타일의 화려함과 공덕 가라오케의 실속 있는 운영 방식 사이에서 갈등하는 분들이 많습니다. 자</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0317.html">강남 셔츠룸 방문객이 고려하는 상수 마사지 추천정보 안내</a>
+        <p class="post-item__summary">강남 셔츠룸 경험자들이 휴식을 위해 상수 지역을 찾을 때 가장 먼저 확인하는 것이 마사지 샵의 실제 후기입니다. 하지만 무분별하게 작성된 광고성 리뷰가 많아 신뢰도 판별이 무엇보다 중요해졌습니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0318.html">강남 셔츠룸 이후 이동하기 좋은 홍대 노래방 추천정보 비교</a>
+        <p class="post-item__summary">강남 셔츠룸 일정을 마친 뒤 홍대 지역으로 이동해 시간을 보내려는 분들이 많습니다. 즐거운 노래방 문화를 즐기기 위해 필요한 합정 펍 안내를 활용해 본인의 성향에 맞는 곳을 찾는 방법을 정리해 보았</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0431.html">강남 셔츠룸 예약 전 알아보는 4</a>
+        <p class="post-item__summary">강남 셔츠룸 방문을 계획할 때 가장 흔히 겪는 실패는 예약 절차를 간과하여 원하는 시간에 입장하지 못하는 경우입니다. 많은 고객이 정보 부족으로 인해 헛걸음을 하거나 불필요한 대기 시간을 낭비하곤 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0432.html">강남 셔츠룸 체크리스트 활용한 구글 틈새 키워드 트래픽 외환 거래 전략 정보</a>
+        <p class="post-item__summary">강남 셔츠룸을 선택할 때는 접근성과 위치 정보를 가장 먼저 확인해야 합니다. 주차 시설의 확보 여부와 대중교통 이용 편의성은 방문의 만족도를 좌우하는 지표입니다. 복잡한 도심 속에서도 원활한 진입이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0433.html">강남 셔츠룸 방문 전 필수 체크리스트와 지수 성장 클리닉 솔루션</a>
+        <p class="post-item__summary">강남 셔츠룸 입구에서 당황하는 초행자들을 보면 준비의 중요성을 다시금 실감하게 됩니다. 무작정 방문하기보다는 해당 공간의 운영 방침과 매너를 미리 숙지하는 것이 필수입니다. 분위기를 파악하지 못하고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-1qj5vy5.html">힙플레이스 카페 해결 방법 총정리</a>
+        <p class="post-item__summary">아, 진짜... 월 매출 3000만원 찍고도 6개월 만에 폐업한 진짜 원가 구조와 마진율 분석!</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-002-1u46gpi.html">강남 셔츠룸 솔직 후기</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-001-1u46gpi.html">강남 셔츠룸 관련 추천 정보</a>
+        <p class="post-item__summary">백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: 이곳의 추천 정보</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
